@@ -3,7 +3,7 @@ import axios from 'axios';
 const DEBUG = process.env.NODE_ENV === 'development';
 
 const apiRequest = axios.create({
-  baseURL: DEBUG ? 'http://localhost:3000' : 'http://118.67.132.217:3000',
+  baseURL: DEBUG ? 'http://localhost:3000' : 'https://boost-issue-tracker-36-backend.herokuapp.com/',
 });
 
 apiRequest.interceptors.request.use(
