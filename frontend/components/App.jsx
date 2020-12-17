@@ -26,9 +26,9 @@ const App = () => (
           <Route exact path='/' component={LoginPage} />
           <Route path='/oauth/callback/github' component={LoggingInPage} />
           <Route path='/signup' component={SignupPage} />
-          <PrivateRoute exact path='/issues' component={IssueListPage} />
           <PrivateRoute exact path='/issues/new' component={IssueAddPage} />
           <PrivateRoute path='/issues/:id' component={IssueDetailPage} />
+          <PrivateRoute path='/issues' component={IssueListPage} />
           <PrivateRoute path='/labels' component={LabelMilestonePage} />
           <PrivateRoute exact path='/milestones' component={LabelMilestonePage} />
           <PrivateRoute path='/milestones/:id/edit' component={LabelMilestonePage} />
