@@ -24,6 +24,17 @@ Object.keys(db).forEach((modelName) => {
 });
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+db.sequelize
+  .sync()
+  .then(() => {
+    console.log(' Sync 성공');
+    console.log(' \n\n');
+  })
+  .catch((err) => {
+    console.log(' Sync 실패');
+    console.error(err);
+    console.log(' \n\n');
+  });
 
 // db.sequelize
 //   .sync({
