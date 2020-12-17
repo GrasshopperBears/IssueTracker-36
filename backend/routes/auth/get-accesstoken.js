@@ -21,6 +21,7 @@ const getUser = async (req, res, next) => {
     req.data = data;
     next();
   } catch (e) {
+    console.error(`GET USER ERROR: ${e}`);
     res.sendStatus(500);
   }
 };

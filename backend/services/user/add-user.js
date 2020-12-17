@@ -20,7 +20,8 @@ module.exports = (req, res) => {
       console.log(img_url);
       res.json({ token, id, nickName, img_url });
     })
-    .catch(() => {
+    .catch((e) => {
+      console.error(`ADD USER ERROR: ${e}`);
       res.sendStatus(500);
     });
 };
