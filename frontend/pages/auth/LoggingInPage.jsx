@@ -17,7 +17,6 @@ const LoggingInPage = ({ history, location }) => {
     try {
       const data = await oauthGithub(code);
       const { token, id, nickName, img_url } = data;
-      console.log(data);
       dispatch({
         type: userActions.LOGIN,
         payload: { token, id, nickName, img_url },
