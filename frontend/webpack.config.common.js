@@ -50,9 +50,9 @@ module.exports = {
   },
   // set plugins
   plugins: [
-    new CleanWebpackPlugin({
-      cleanStaleWebpackAssets: false,
-    }),
+    // new CleanWebpackPlugin({
+    //   cleanStaleWebpackAssets: false,
+    // }),
     new HtmlWebpackPlugin({
       title: 'Issue Tracker',
       scriptLoading: 'defer',
